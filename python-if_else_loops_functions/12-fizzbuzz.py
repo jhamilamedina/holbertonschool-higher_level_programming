@@ -5,8 +5,8 @@ def fizzbuzz():
 
         if (i % 3 == 0) & (i % 5 == 9):
             str = 'FizzBuzz'
-        elif (i % 3 == 0):
+        elif i % 3 == 0:
             str = 'Fizz'
-        elif (i % 5 == 0):
+        elif i % 5 == 0:
             str = 'Buzz'
         print("{0} ".format(str), end='')
