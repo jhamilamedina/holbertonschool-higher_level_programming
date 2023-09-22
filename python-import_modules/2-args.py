@@ -8,9 +8,9 @@ if __name__ == '__main__':
     if lenArgc == 0:
         strArgs = 'arguments.'
     elif lenArgc == 1:
-        strArgs = 'arguments:'
+        strArgs = 'argument:'
 
-    print("{} {}".format(lenArgc, strArgs))
+    print("{0} {1}".format(lenArgc, strArgs))
 
     for i in range(1, lenArgc + 1):
-        print("{}: {}".format(i, argv[i]))
+        print("{0}: {1}".format(i, argv[i]))
