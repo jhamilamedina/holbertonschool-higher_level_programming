@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-'print(__import__("my_module").MyClass.__doc__)'
-'print(__import__("my_module").__doc__)'
+"""Se define una clase Square"""
+
+
 class Square:
+    "Representa la clase Square"""
     pass
