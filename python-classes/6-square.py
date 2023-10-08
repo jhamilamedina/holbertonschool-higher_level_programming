@@ -19,6 +19,7 @@ class Square:
 
     @size.setter
     def size(self, value):
+        """Definimo um metodo llamado size"""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -32,6 +33,7 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """Definimo um metodo llamado position"""
         if (type(value) is not tuple or len(value) != 2 or
                 type(value[0]) is not int or
                 type(value[1]) is not int or
@@ -41,7 +43,8 @@ class Square:
             self.__position = value
 
     def area(self):
-        return self.__size * self.__size
+        """Devuleve el resultado del área de un cuadrado"""
+        return (self.__size ** 2)
 
     def my_print(self):
         if self.__size == 0:
