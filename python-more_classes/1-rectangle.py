@@ -1,0 +1,41 @@
+#!/usr/bin/python3
+"""Definición de una clase"""
+
+
+class Rectangle:
+    """Representación de la clase"""
+    def __init__(self, width=0, height=0):
+        """Inicializa la función y verifica 
+        si es >= 0
+        Args:
+            widh(int)es el ancho del rectangulo
+            height(int) es el alto del rectangulo
+        """
+        self.width = width
+        self.height = height
+
+    @property
+    def width(self):
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Definimos un metodo llamado width"""
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
+
+    @property
+    def height(self):
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """Definimos un metodo llamado height"""
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
