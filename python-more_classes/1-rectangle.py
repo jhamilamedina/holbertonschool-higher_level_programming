@@ -5,8 +5,8 @@
 class Rectangle:
     """Representación de la clase"""
     def __init__(self, width=0, height=0):
-        """Inicializa la función y verifica 
-        si es >= 0
+        """Inicializa el metodo constructor, tiene 2 parametros
+
         Args:
             widh(int)es el ancho del rectangulo
             height(int) es el alto del rectangulo
