@@ -5,11 +5,12 @@
 class Rectangle:
     """Representación de la clase"""
     def __init__(self, width=0, height=0):
-        """Inicializa el metodo constructor, tiene 2 parametros
+        """
+        Inicializa el metodo constructor, tiene 2 parametros
 
         Args:
-        width(int)es el ancho del rectangulo
-        height(int) es el alto del rectangulo
+            width(int)es el ancho del rectangulo
+            height(int) es el alto del rectangulo
         """
         self.width = width
         self.height = height
@@ -21,6 +22,7 @@ class Rectangle:
         Return:
             int: retorna el ancho(height)
         """
+        return self.__width
 
     @width.setter
     def width(self, value):
