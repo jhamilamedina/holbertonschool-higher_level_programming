@@ -85,11 +85,8 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        rectangle_str = ""
-        for i in range(self.__height):
-            rectangle_str += "#" * self.__width + "\n"
-        return rectangle_str.rstrip()  # eliminar la nueva linea final
-
-    def __repr__(self):
-
-        return f'Rectangle({self.__width}, {self.__height})'
+        else:
+            a = self.__height + 1
+            b = self.__width
+            str_repr = ''.join([f"{'#' * b}\n" for i in range(a) if i])
+            return str_repr[:len(str_repr) - 1]
