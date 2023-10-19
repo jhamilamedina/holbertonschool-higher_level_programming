@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""Definimos una función read_file"""
+
+
 def read_file(filename=""):
-    with open("my_file_0.txt") as m:
-        print(m.read())
+    """Usamos el open para abrir el archivo"""
+    with open(filename) as m:
+        txt = m.read()
+        print(txt)
