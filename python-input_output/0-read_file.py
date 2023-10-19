@@ -6,4 +6,4 @@ def read_file(filename=""):
     """Usamos el open para abrir el archivo"""
     with open(filename) as m:
         txt = m.read()
-        print(txt)
+        print(txt, end="")
