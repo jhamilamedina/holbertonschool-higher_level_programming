@@ -1,2 +1,2 @@
--- Imprimir la descripción de la tabla first_table.
-SHOW COLUMNS FROM first_table;
+-- Imprimir la descripción de la tabla first_table.I
+DESC first_table;
