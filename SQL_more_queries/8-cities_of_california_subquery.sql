@@ -2,9 +2,9 @@
 -- Los Registros deben ordenarse de manera ascendente(ASC) por cities.id.
 
 SELECT * FROM cities
-WHERE state_id = (
-	SELECT id 
-	FROM cities 
+WHERE state.id = (
+	SELECT ID
+	FROM states
 	WHERE name = 'California'
 )
-ORDER BY id ASC;
+ORDER BY ID ASC;
