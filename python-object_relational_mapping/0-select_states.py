@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Este modulo sirve para 
-conectar con MySQL
+Este modulo sirve para conectar con MySQL
 """
 
 
@@ -9,19 +8,14 @@ import MySQLdb
 import sys
 
 
-def main():
-    """
-    Esta función consulta la
-    tabla states en BD hbtn_0e_0_usa
-    """
-    
+if __name__ == "__main__":
     # Estableciendo la coneccion con MySQL
     db = MySQLdb.connect(
             host="localhost",
             user=sys.argv[1],
-            password=sys.argv[2],
+            passwd=sys.argv[2],
             port=3306,
-            database=sys.argv[3],
+            db=sys.argv[3],
     )
     cu = db.cursor()
     # Consulta para ordenar eatados ordenados por id
@@ -29,7 +23,7 @@ def main():
 
     # Recupera todas las filas(rows)
     rows = cu.fetchall()
-    
+
     # Mustra el resultado
     for row in rows:
         print(row)
@@ -37,10 +31,3 @@ def main():
     # Cerrar el cursor y la coneccion
     cu.close()
     db.close()
-
-
-if __name__ == "__main__":
-    """
-    Esta validacion evitara que se ejecute este archivo
-    """
-    main()
