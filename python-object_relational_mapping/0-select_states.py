@@ -16,26 +16,27 @@ def main():
     """
     
     # Estableciendo la coneccion con MySQL
-    connection = MySQLdb.connect(
+    db = MySQLdb.connect(
             host="localhost",
             user=sys.argv[1],
             password=sys.argv[2],
             port=3306,
             database=sys.argv[3],
     )
-    cursor = connection.cursor()
+    cu = db.cursor()
     # Consulta para ordenar eatados ordenados por id
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cu.execute("SELECT * FROM states ORDER BY id ASC")
+
     # Recupera todas las filas(rows)
-    states = cursor.fetchall()
+    rows = cu.fetchall()
     
     # Mustra el resultado
-    for state in states:
-        print(states)
+    for row in rows:
+        print(row)
 
     # Cerrar el cursor y la coneccion
-    cursor.close()
-    connection.close()
+    cu.close()
+    db.close()
 
 
 if __name__ == "__main__":
