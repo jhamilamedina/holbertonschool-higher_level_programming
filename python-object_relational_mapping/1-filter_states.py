@@ -20,8 +20,8 @@ if __name__ == "__main__":
     )
     cu = db.cursor()
     # Consulta para ordenar estados que empiecen con N ordenados por id
-    cu.execute("SELECT * FROM states WHERE
-                    name LIKE BINARY 'N%' ORDER BY states.id")
+    cu.execute("""SELECT * FROM states WHERE
+               name LIKE BINARY 'N%' ORDER BY states.id""")
 
     # Recupera todas las filas(rows)
     rows = cu.fetchall()
