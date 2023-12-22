@@ -20,16 +20,16 @@ if __name__ == "__main__":
     )
     cu = db.cursor()
     # Consulta para ordenar estados que empiecen con N ordenados por id
-    cu.execute("""SELECT cities.id, cities.name FROM cities INNER JOIN states
-               ON cities.state_id = states_id
-               WHERE states.name = %s ORDER BY cities.id ASC"""
+    cu.execute("""SELECT cities.name FROM cities INNER JOIN states
+               ON states.id=cities.state_id
+               WHERE states.name = %s""", (sys.argv[4],))
 
     # Recupera todas las filas(rows)
-    cities = cu.fetchall()
+    rows = cu.fetchall()
 
     # Mustra el resultado
     tmp = list(row[0] for row in rows)
-    print(*tmp, sep=". ")
+    print(*tmp, sep=", ")
 
     # Cerrar el cursor y la coneccion
     cu.close()
