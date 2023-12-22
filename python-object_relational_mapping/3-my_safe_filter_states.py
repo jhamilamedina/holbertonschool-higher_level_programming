@@ -19,9 +19,9 @@ if __name__ == "__main__":
              db=sys.argv[3],
     )
     cu = db.cursor()
+    match = sys.argv[4]
     # Consulta para ordenar estados que empiecen con N ordenados por id
-    cu.execute("""SELECT * FROM states WHERE BINARY name = %s
-               ORDER BY id ASC"""
+    cu.execute("SELECT * FROM states WHERE name LIKE %s", (match, ))
 
     # Recupera todas las filas(rows)
     rows = cu.fetchall()
