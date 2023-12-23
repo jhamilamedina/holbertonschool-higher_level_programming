@@ -15,6 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    new_instance = session.query(State).filter_by(id=2).first()
-    new_instance = 'New Mexico'
-    session.commit()
+    new_instance = session.query(State).filter_by(id= 2).first()
+    if new_instance:
+        new_instance.name = 'New Mexico'
+        session.commit()
