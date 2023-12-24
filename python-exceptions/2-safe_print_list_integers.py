@@ -10,5 +10,6 @@ def safe_print_list_integers(my_list=[], x=0):
                 n_element += 1
     except (IndexError, TypeError):
         pass
-    
+    print(e)
+    print()
     return n_element  # Retora un numero real o entero
